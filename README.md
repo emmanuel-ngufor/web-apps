@@ -95,8 +95,8 @@ If you would like to contribute to this repository, feel free to fork the repo, 
 ## Contact
 Feel free to contact me if you have any questions, suggestions, or feedback about the projects in this repository. You can reach me via:
 
-Email: nguforemmanuel53@gmail.com
-LinkedIn: [your-linkedin-profile](https://linkedin.com/in/emmanuel-ngufor)
+**Email: nguforemmanuel53@gmail.com**
+**LinkedIn: [your-linkedin-profile](https://linkedin.com/in/emmanuel-ngufor)**
 I look forward to connecting with fellow developers and learning more as I continue to grow in this field!
 
 ### Happy Coding!
