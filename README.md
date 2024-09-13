@@ -71,24 +71,32 @@ To run any of the projects on your local machine:
 4. **Run the project: Most Node.js/Express projects can be run using:**
     ```bash
     node server.js
-    For React projects, use:
+**For React projects, use:**
     ```bash
     npm start
 
 5. **Access the app: Open your browser and go to http://localhost:3000 (or the specified port).**
 
-Contributing
+## Contributing
 If you would like to contribute to this repository, feel free to fork the repo, make your changes, and create a pull request. All contributions are welcome!
 
-Fork the repository.
-Create a new branch with your feature or bug fix.
-Commit your changes.
-Submit a pull request.
-Contact
+1. **Fork the repository.**
+2. **Create a new branch with your feature or bug fix.**
+    ```bash
+    git checkout -b feature-name
+3. **Commit your changes.**
+    ```bash
+    git commit -m "Description of your changes"
+4. **Push to the branch**
+    ```bash
+    git push origin feature-name
+6. **Create a pull request – Your changes will be reviewed before being merged**
+
+## Contact
 Feel free to contact me if you have any questions, suggestions, or feedback about the projects in this repository. You can reach me via:
 
-Email: your.email@example.com
-LinkedIn: your-linkedin-profile
+Email: nguforemmanuel53@gmail.com
+LinkedIn: [your-linkedin-profile](https://linkedin.com/in/emmanuel-ngufor)
 I look forward to connecting with fellow developers and learning more as I continue to grow in this field!
 
-Happy Coding!
+### Happy Coding!
