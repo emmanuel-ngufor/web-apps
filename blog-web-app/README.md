@@ -42,7 +42,7 @@ Gather content and design ideas, create wireframes and mockups. Plan out how the
 
 
 
-Hour 1:  Setup
+- Hour 1:  Setup
 --------------
 
 Set up the project repository, initialize the Node.js application, and install necessary dependencies (Express.js, EJS).
