@@ -60,27 +60,22 @@ To run any of the projects on your local machine:
    git clone https://github.com/yourusername/web-apps.git
 
 
-Navigate to a specific project directory:
+2. **Navigate to a specific project directory:**
+    ```bash
+    cd project-name
 
-bash
-Copy code
-cd project-name
-Install dependencies: Each project may have its own dependencies listed in a package.json file. Run:
+3. **Install dependencies: Each project may have its own dependencies listed in a package.json file. Run:**
+    ```bash
+    npm install
 
-bash
-Copy code
-npm install
-Run the project: Most Node.js/Express projects can be run using:
+4. **Run the project: Most Node.js/Express projects can be run using:**
+    ```bash
+    node server.js
+    For React projects, use:
+    ```bash
+    npm start
 
-bash
-Copy code
-node app.js
-For React projects, use:
-
-bash
-Copy code
-npm start
-Open the project in a browser: Typically, projects will be served at http://localhost:3000, but this can vary.
+5. **Access the app: Open your browser and go to http://localhost:3000 (or the specified port).**
 
 Contributing
 If you would like to contribute to this repository, feel free to fork the repo, make your changes, and create a pull request. All contributions are welcome!
