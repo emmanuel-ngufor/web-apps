@@ -1,0 +1,11 @@
+<%- include("./partials/header.ejs") %>
+
+    <h1>Edit Post</h1>
+
+    <form id="form-data" action="/edit-post/<%= post.title %>" method="post">
+        <input type="text" name="title" value="<%= post.title %>" style = "height: 30px;" class="border border-dark" required>
+        <textarea name="content" style = "height: 200px;" class="border border-dark" required><%= post.content %></textarea>
+        <button class="btn-sucess rounded" type="submit">Save</button>
+    </form>
+
+<%- include("./partials/footer.ejs") %>

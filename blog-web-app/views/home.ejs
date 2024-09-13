@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+
+    <h1>BLOG-MANIA</h1>
+
+    <!-- New Post Form -->
+    <form id="form-data" action="/new-post" method="post">
+        <input type="text" name="title" placeholder="Post Title" style = "height: 30px;" class="border border-dark" required >
+        <textarea name="content" placeholder="Post Content" style = "height: 125px;" class="border border-dark" required></textarea>
+        <button type="submit" class="rounded">Add Post</button>
+    </form>
+
+    <!-- Display Posts -->
+    <ul>
+        <% posts.forEach( (post) => { %>
+            <li>
+                <h2><%= post.title %></h2>
+                <p><%= post.content %></p>
+                <div class="form-button">
+                    <form action="/edit-post/<%= post.title %>" method="get">
+                        <button class="btn-primary mr-4 rounded">Edit</button>
+                    </form>
+                    <form action="/delete-post/<%= post.title %>" method="post">
+                        <button class="btn-danger rounded">Delete</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+
+<%- include("./partials/footer.ejs") %>

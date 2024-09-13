@@ -35,13 +35,15 @@ Technical Requirements
 
 Timeline
 ========
-         Hour 0: Planning
+Hour 0: Planning
+----------------
 
 Gather content and design ideas, create wireframes and mockups. Plan out how the application will work, which routes might be necessary and which pages need to be made.
 
 
 
 Hour 1:  Setup
+--------------
 
 Set up the project repository, initialize the Node.js application, and install necessary dependencies (Express.js, EJS).
 
@@ -52,6 +54,7 @@ Set up the Express.js server and define the necessary routes.
 
 
 Hour 2-3: Implementing Features
+-------------------------------
 
 Implement the post creation feature. This includes creating the form on the home page and handling the form submission in the server.
 
@@ -66,6 +69,7 @@ Test the application to ensure that post creation and viewing are working correc
 
 
 Hour 4-5: Styling and Polishing
+-------------------------------
 
 Style the application. This includes creating a CSS file, linking it to your EJS templates, and writing CSS or using Bootstrap/Flexbox/Grid to style the application.
 
