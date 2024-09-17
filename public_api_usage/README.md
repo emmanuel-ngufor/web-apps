@@ -27,13 +27,17 @@ Use the Open UV API to make a website based on your home location that tells you
 Bonus points for choosing your own API and creating something of your own. Sometimes, you'll decide on an API and then realise that it doesn't work, that's all a part of the process, just move on to the next one and try again!
 
 ## Requirements
+
 1. **API Choice**
+
 Browse through the provided list and choose an API of interest. This choice should be guided by the potential to retrieve, manipulate, and present data in a meaningful and interactive way. I recommend choosing an API that does not require authentication and is CORS enabled. (What is CORS?)
 
 2. **Project Planning**
+
 Think through your project, researching the chosen API, its features, what data it will provide, and how it will be used in your web application.
 
 3. **Project Setup**
+
 Set up a new Node.js project using Express.js.
 
 Include Axios for making HTTP requests.
