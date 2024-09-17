@@ -45,6 +45,7 @@ Each project is located in its own folder with a brief description and relevant 
 - **MongoDB** – NoSQL database for storing data
 - **Mongoose** – ORM for MongoDB
 - **EJS (Embedded JavaScript Templates)** – For rendering dynamic content in the UI
+- **Axios** – For public API interaction and Authentication
 
 ### Tools and Libraries:
 - **Git** – Version control system for tracking changes
