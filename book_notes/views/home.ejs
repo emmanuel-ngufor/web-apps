@@ -1,0 +1,53 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Soccer Competitions</h1>
+
+<!-- New League Form -->
+<form id="form-data" action="/new-league" method="post">
+  <input type="text" name="name" placeholder="League Name" required />
+  <input type="text" name="type" placeholder="League Type" required />
+  <input type="text" name="country" placeholder="Country" required />
+  <input type="number" name="seasons" placeholder="Number of Seasons" />
+  <input type="text" name="logo" placeholder="Logo URL" /><br><br>
+  <button type="submit">Add League</button><br><br>
+</form><hr>
+
+<!-- Display data in a table -->
+<% if (locals.content) { %>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Logo</th>
+        <th>League Name</th>
+        <th>League Type</th>
+        <th>Country</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% content.forEach(data => { %>
+      <tr>
+        <td><img src="<%= data.logo %>" alt="league icon" width="50" /></td>
+        <td><%= data.leaguename %></td>
+        <td><%= data.leaguetype %></td>
+        <td><%= data.country %></td>
+        <td><%= data.seasons %></td>
+        <td>
+          <form action="/edit-league/<%= data.id %>" method="get" style="display:inline-flex;">
+            <button type="submit">Edit</button>
+          </form> 
+        </td>
+        <td>
+          <form action="/delete-league/<%= data.id %>" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

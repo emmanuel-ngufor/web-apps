@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Edit League</h1>
+
+<form action="/edit-league/<%= league.id %>" method="post">
+  <input type="text" name="name" value="<%= league.leaguename %>" required />
+  <input type="text" name="type" value="<%= league.leaguetype %>" required />
+  <input type="text" name="country" value="<%= league.country %>" required />
+  <input type="number" name="seasons" value="<%= league.seasons %>" />
+  <input type="text" name="logo" value="<%= league.logo %>" /><br><br>
+  <button type="submit">Update League</button>
+</form>
+
+<%- include("partials/footer.ejs") %>
