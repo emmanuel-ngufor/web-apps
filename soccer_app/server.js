@@ -1,17 +1,30 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+// API setup
+// apiKey = process.env.API_KEY
+const apiUrl = "https://v3.football.api-sports.io/leagues";
+const headers = {
+  "x-apisports-key": process.env.API_KEY,
+  Accept: "application/json",
+};
+
 
 // PostgreSQL setup
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "permalist",
-  password: "Emma-Nuel65",
-  port: 5432,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
 });
 db.connect();
 
@@ -19,6 +32,33 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
+/* async function getDataFromAPIandStoreToDb() {
+  try {
+    const result = await axios.get(apiUrl, { headers: headers });
+    const leagues = result.data.response.slice(0, 20); // Limit to 20 leagues
+    try {
+      leagues.forEach((data) => {
+        db.query(
+          "INSERT INTO leagues (logo, leaguename, leaguetype, country, seasons) VALUES ($1, $2, $3, $4, $5);",
+          [
+            data.league.logo,
+            data.league.name,
+            data.league.type,
+            data.country.name,
+            data.seasons.length,
+          ]
+        );
+      });
+    } catch (err) {
+      console.log(err); // Handle any DB insertion errors
+    }
+  } catch (err) {
+    console.log(err); // Handle any API errors
+  }
+} 
+*/
+
 
 // Fetch all leagues from the database
 async function getItems() {
@@ -79,6 +119,7 @@ app.post("/delete-league/:id", async (req, res) => {
     console.error(err);
   }
 });
+
 
 // Start the server
 app.listen(port, () => {
